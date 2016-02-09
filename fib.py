@@ -1,4 +1,4 @@
-def slow_fib(number,sum):
+def slow_fib(number):
 	# base cases
 	if number == 0:
 		return 0
@@ -15,7 +15,11 @@ def fib_sum(number):
 	b = 1
 	# iteratively sum up the fibonacci numbers
 	for i in range(number-2):
+		# without using temporary variables
+		# set a to b then with the original a,
+		# set b to ( a + b ) using python magic
 		a, b = b, a + b
+	# return the last number of the fibonacci sequence
 	return a + b
 
 def fast_fib(n):
@@ -31,3 +35,4 @@ def fib_helper(a,b,n):
 	# essentially 'looping' while calculation the fibonacci sequence
 	else:
 		return fib_helper(b,(a+b),(n-1))
+print(fib_sum(10000))

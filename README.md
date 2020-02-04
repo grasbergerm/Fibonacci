@@ -15,6 +15,6 @@ number in the fibonacci sequence. Even a call for fib_sum(10000) only takes .1 s
 
 We use the same idea but with recursion for fast_fib. Using a helper function is necessary because calls to fast_fib only have knowledge
 of n, whereas we need the ability to remember n and two sequential numbers of the fibonacci sequence. The recursive calls perform the 
-same function as iteration in the previous function, fib_sum. If there are more numbers in the fibonacci sequence to calculate (n is not
+same function as iteration in the previous function, fib_sum. If there are more numbers in the fibonacci sequence to calculate (when n is not
 zero) then we simply call fib_helper with the values b for a and a+b for b. Finally when we've finished these recursive calls and additions
 n is equal to zero and we return a, the nth fibonacci number.

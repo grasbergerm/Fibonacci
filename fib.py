@@ -35,4 +35,3 @@ def fib_helper(a,b,n):
 	# essentially 'looping' while calculation the fibonacci sequence
 	else:
 		return fib_helper(b,(a+b),(n-1))
-print(fib_sum(10000))
